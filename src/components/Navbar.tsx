@@ -31,7 +31,10 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2">
-          <span className="text-2xl font-bold gradient-text">AI Revolution</span>
+          <div className="w-10 h-10 bg-gradient-to-r from-aiblue to-aipink rounded-lg flex items-center justify-center">
+            <span className="text-white font-bold text-xl">V</span>
+          </div>
+          <span className="text-2xl font-bold gradient-text">VerticalAgent</span>
         </Link>
 
         {/* Mobile Menu Button */}

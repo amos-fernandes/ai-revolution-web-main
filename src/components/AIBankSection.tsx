@@ -59,11 +59,11 @@ const AIBankSection = () => {
               </li>
             </ul>
             
-            <Link to="/services">
+            <a href="http://aibank.app.br" target="_blank" rel="noopener noreferrer">
               <Button className="bg-aiblue hover:bg-aiblue/90 text-white">
                 Conheça o AIBANK
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

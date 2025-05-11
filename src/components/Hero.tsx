@@ -49,7 +49,9 @@ const Hero = () => {
                 Monitoramento inteligente de tarefas repetitivas
               </div>
               <div className="checkmark-item">
-                Projeto AIBANK com rede neural para investimentos
+                <a href="http://aibank.app.br" target="_blank" rel="noopener noreferrer" className="text-aiblue hover:underline">
+                  Projeto AIBANK com rede neural para investimentos
+                </a>
               </div>
             </div>
           </div>
