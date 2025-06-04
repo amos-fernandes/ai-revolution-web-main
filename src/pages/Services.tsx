@@ -184,12 +184,12 @@ const Services = () => {
             </div>
             
             <div className="mt-8 flex justify-center">
-              <Link to="/contact">
+              <a href="http://aibank.app.br" target="_blank" rel="noopener noreferrer">
                 <Button className="bg-gradient-to-r from-aiblue to-aipink hover:from-aiblue/90 hover:to-aipink/90 text-white">
                   Saber mais sobre o AIBANK
                   <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

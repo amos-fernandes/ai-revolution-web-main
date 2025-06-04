@@ -31,7 +31,12 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2">
-          <span className="text-2xl font-bold gradient-text">AI Revolution</span>
+          <img 
+            src="/lovable-uploads/4f238088-3501-4d1d-a902-a91c32a00408.png" 
+            alt="VerticalAgent Logo" 
+            className="w-10 h-10 rounded-xl"
+          />
+          <span className="text-2xl font-bold gradient-text">VerticalAgent</span>
         </Link>
 
         {/* Mobile Menu Button */}
@@ -47,6 +52,8 @@ const Navbar = () => {
           <Link to="/" className="font-medium hover:text-aiblue transition-colors">Home</Link>
           <Link to="/about" className="font-medium hover:text-aiblue transition-colors">Quem Somos</Link>
           <Link to="/services" className="font-medium hover:text-aiblue transition-colors">Serviços</Link>
+          <Link to="/demonstracao" className="font-medium hover:text-aiblue transition-colors">Demonstração</Link>
+          <Link to="/dashboard" className="font-medium hover:text-aiblue transition-colors">Dashboard</Link>
           <Link to="/contact">
             <Button className="bg-aiblue hover:bg-aiblue/90 text-white">Contate-nos</Button>
           </Link>
@@ -87,6 +94,20 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
             >
               Serviços
+            </Link>
+            <Link 
+              to="/demonstracao" 
+              className="text-xl font-medium hover:text-aiblue transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              Demonstração
+            </Link>
+            <Link 
+              to="/dashboard" 
+              className="text-xl font-medium hover:text-aiblue transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              Dashboard
             </Link>
             <Link 
               to="/contact"

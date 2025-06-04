@@ -55,8 +55,8 @@ const ContactForm = () => {
 
   // WhatsApp redirect handler
   const handleWhatsAppRedirect = () => {
-    // Replace with your actual WhatsApp number
-    const phoneNumber = "5511999999999"; 
+    // Updated WhatsApp number
+    const phoneNumber = "5562981647087"; 
     const message = "Olá! Gostaria de mais informações sobre a automação com IA.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');

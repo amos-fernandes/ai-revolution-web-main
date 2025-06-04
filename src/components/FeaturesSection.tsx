@@ -5,6 +5,8 @@ interface Feature {
   title: string;
   description: string;
   icon: string;
+  image: string;
+  color: string;
 }
 
 const FeaturesSection = () => {
@@ -12,32 +14,44 @@ const FeaturesSection = () => {
     {
       title: "Agentes de IA Autônomos",
       description: "Substitua funções completas com agentes de IA treinados para executar tarefas específicas com precisão e eficiência superiores aos humanos.",
-      icon: "🤖"
+      icon: "🤖",
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      color: "from-blue-500 to-cyan-500"
     },
     {
       title: "Economia de Recursos",
       description: "Elimine custos trabalhistas, benefícios, turnover e necessidade de gestão humana com funcionários virtuais que nunca tiram férias.",
-      icon: "💰"
+      icon: "💰",
+      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      color: "from-green-500 to-emerald-500"
     },
     {
       title: "Disponibilidade 24/7",
       description: "Conte com atendimento, processamento e análises em tempo integral, sem pausas, sem cansaço e com performance consistente.",
-      icon: "🕒"
+      icon: "🕒",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      color: "from-purple-500 to-pink-500"
     },
     {
       title: "Escalabilidade Instantânea",
       description: "Amplie ou reduza sua equipe virtual em minutos, sem processos de contratação ou demissão, adaptando-se a demandas sazonais.",
-      icon: "📈"
+      icon: "📈",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      color: "from-orange-500 to-red-500"
     },
     {
       title: "Aprendizado Contínuo",
       description: "Nossos agentes de IA evoluem constantemente, aprendendo com cada interação e melhorando seu desempenho com o tempo.",
-      icon: "🧠"
+      icon: "🧠",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      color: "from-indigo-500 to-purple-500"
     },
     {
       title: "Integração Perfeita",
       description: "Compatível com suas ferramentas atuais, nossos agentes se integram facilmente aos sistemas existentes sem grandes mudanças estruturais.",
-      icon: "🔄"
+      icon: "🔄",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      color: "from-teal-500 to-blue-500"
     }
   ]);
 
@@ -58,11 +72,32 @@ const FeaturesSection = () => {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg transition-transform hover:translate-y-[-5px]"
+              className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg transition-all duration-500 hover:translate-y-[-8px] hover:shadow-2xl"
             >
-              <div className="text-4xl mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-gray-600 dark:text-gray-400">{feature.description}</p>
+              {/* Image Section */}
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={feature.image} 
+                  alt={feature.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className={`absolute inset-0 bg-gradient-to-t ${feature.color} opacity-60`}></div>
+                <div className="absolute top-4 left-4">
+                  <div className="text-4xl bg-white/20 backdrop-blur-sm rounded-full w-16 h-16 flex items-center justify-center">
+                    {feature.icon}
+                  </div>
+                </div>
+              </div>
+              
+              {/* Content Section */}
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
